@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        input, button {
+            display: block;
+            width: 90%;
+            margin: 10px auto;
+            padding: 8px;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>User Registration Form</h2>
+    <form id="userForm" action="/submit" method="POST" onsubmit="return validateForm()">
+        <input type="text" id="name" name="name" placeholder="Name" required>
+        <span class="error" id="nameError"></span>
+
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <span class="error" id="emailError"></span>
+
+        <input type="tel" id="phone" name="phone" placeholder="Phone Number" required>
+        <span class="error" id="phoneError"></span>
+
+        <input type="number" id="age" name="age" placeholder="Age" required>
+        <span class="error" id="ageError"></span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            let isValid = true;
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let age = document.getElementById("age").value.trim();
+
+            document.getElementById("nameError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+            document.getElementById("ageError").innerText = "";
+
+            if (name.length < 3) {
+                document.getElementById("nameError").innerText = "Name must be at least 3 characters long.";
+                isValid = false;
+            }
+
+            let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Invalid email format.";
+                isValid = false;
+            }
+
+            let phonePattern = /^[0-9]{10}$/;
+            if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText = "Phone must be 10 digits.";
+                isValid = false;
+            }
+
+            if (age < 18 || age > 100) {
+                document.getElementById("ageError").innerText = "Age must be between 18 and 100.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+    </script>
+
+</body>
+</html>
