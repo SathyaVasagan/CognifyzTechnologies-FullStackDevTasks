@@ -21,6 +21,10 @@
 
 -----------------------------------------------------------------------------------------
 
+**Install the necessary dependencies**
+
+    npm install express ejs body-parser
+
 **Run the Server**
 
   Start the server:
