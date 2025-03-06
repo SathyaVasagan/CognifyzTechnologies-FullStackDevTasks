@@ -1,22 +1,22 @@
 **📂 Project Structure**
 
-  Task03-advanced-css-styling/
-  
-  │-- 📁 views/            # EJS templates
-  
-  │   ├── index.ejs        # Enhanced Form Page
-  
-  │   ├── success.ejs      # Success Page
-  
-  │-- 📄 server.js         # Node.js server file
-  
-  │-- 📄 package.json      # Node.js dependencies
-  
-  │-- 📁 public/           # Static assets (CSS, images, etc.)
-  
-  │   ├── styles.css       # Custom CSS styles
-  
-  │-- 📁 node_modules/     # Installed dependencies
+    Task03-advanced-css-styling/
+    
+    │-- 📁 views/            # EJS templates
+    
+    │   ├── index.ejs        # Enhanced Form Page
+    
+    │   ├── success.ejs      # Success Page
+    
+    │-- 📄 server.js         # Node.js server file
+    
+    │-- 📄 package.json      # Node.js dependencies
+    
+    │-- 📁 public/           # Static assets (CSS, images, etc.)
+    
+    │   ├── styles.css       # Custom CSS styles
+    
+    │-- 📁 node_modules/     # Installed dependencies
 
 
 -----------------------------------------------------------------------------------------
