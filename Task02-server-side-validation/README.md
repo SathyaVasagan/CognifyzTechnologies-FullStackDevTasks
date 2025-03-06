@@ -1,3 +1,7 @@
+**Install the necessary dependencies**
+
+    npm install express ejs body-parser
+
 **1️⃣ Extend HTML with More Complex Forms and User Interactions**
   
   We will modify index.ejs to include: 
