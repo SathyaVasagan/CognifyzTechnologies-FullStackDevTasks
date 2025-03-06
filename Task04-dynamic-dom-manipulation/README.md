@@ -20,6 +20,11 @@
 
 ----------------------------------------------------------
 
+**Install the necessary dependencies**
+
+    npm install express ejs body-parser
+
+    
  **Run the Server**
 
    Start the server:
@@ -30,5 +35,5 @@
 
     nodemon server.js
 
-
+Open **http://localhost:3000** to see the responsive form.
 
